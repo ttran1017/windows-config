@@ -19,38 +19,9 @@
     "unfocused_border": "Base03",
     "bar_accent": "Base0D"
   },
-  "monitors": [
-    {
-      "workspaces": [
-        {
-          "name": "I",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "II",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "III",
-          "layout": "VerticalStack"
-        }
-      ]
-    },
-    {
-      "workspaces": [
-        {
-          "name": "I",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "II",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "III",
-          "layout": "VerticalStack"
-        }
-      ]
-    }
-  ]
+  "display_index_preferences": {
+    "0": "ACR0759-7&195c03a6&0&UID772",
+    "1": "ACR0759-7&195c03a6&0&UID768",
+    "2": "TCL2875-7&195c03a6&0&UID780"
+  }
 }
