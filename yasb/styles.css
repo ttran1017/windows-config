@@ -1,36 +1,67 @@
+/*
+.widget .label {} -> Global label for all
+.active-window-widget {} -> Styles specific to the active window widget
+.clock-widget {} -> Styles specific to the clock widget
+.cpu-widget {} -> Styles specific to the CPU widget
+.memory-widget {} -> Styles specific to the memory widget
+.weather-widget {} -> Styles specific to the weather widget
+.komorebi-workspaces {} -> Styles specific to komorebi workspaces
+.komorebi-active-layout {} -> Styles specific to komorebi active layout
+.volume-widget {} -> Styles specific to the volume widget 
+.apps-widget {} -> Styles specific to the apps widget
+.power-menu-widget {} -> Styles for the power menu button widget
+.power-menu-popup {} -> Styles for the power menu popup widget
+.power-menu-popup > .button {} -> Styles for power buttons inside the popup 
+.power-menu-popup > .button > .icon,
+.power-menu-popup > .button > .label {} -> Styles for power buttons icons and labels inside the popup 
+.media-widget {} -> Styles specific to the media widget
+.github-widget {} -> Styles specific to the github widget
+*/
 * {
-	font-size: 13px;
+	font-size: 12px;
 	color: #cdd6f4;
-	font-weight: 600;
-	font-family: "Segoe UI","JetBrainsMono NFP";
+	font-weight: 500;
+	font-family: "JetBrainsMono NFP";
 	margin: 0;
 	padding: 0;
 }
 .yasb-bar {
 	padding: 0 8px;
 	margin: 0;
-    background-color: rgba(30, 30, 46, 0.25);
+    background-color: rgba(146, 145, 155, 0.16);
 }
 .widget {
 	padding: 0 8px;
 	margin: 0;
 }
-.widget .label {
-	padding: 0px 2px 2px 2px;
+ 
+ 
+ 
+.container-left,
+.container-center,
+.container-right {
+	margin: 0;
+	padding: 0;
 }
-.widget .label.alt {
-	padding: 1px 8px 1px 8px;
+.active-window-widget .icon {
+    margin-right: 8px;
 }
-.komorebi-workspaces,
-.komorebi-active-layout  {
-    margin: 0;
-    padding: 0;
+
+.komorebi-active-layout .label {
+	font-weight: 600;
+	padding: 2px 0 0 0;
+}
+.komorebi-workspaces .widget-container {
+    background-color: rgba(188, 195, 207, 0.178);
+    margin: 4px 0;
+    border-radius: 12px;
 }
 .komorebi-workspaces .ws-btn {
-	font-size: 16px;
+	font-size: 14px;
     background-color: transparent;
 	margin: 0 4px 0 4px;
 	color: #95a0ad;
+    padding: 0;
 }
 .komorebi-workspaces .ws-btn.populated {
 	color: #a0c3ee;
@@ -40,26 +71,9 @@
 .komorebi-workspaces .ws-btn.active {
 	color: #c2daf7;
 }
-.apps-widget {
-    padding: 0 4px;
-}
-.apps-widget .widget-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 5px 0 4px 0;
-    border-radius: 13px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.apps-widget .label {
-	font-size: 14px;
-	padding:0px 2px 1px 2px;
-}
-.apps-widget .label:hover {
-	color: #fff;
-}
-.active-window-widget .icon {
-    padding: 0 0 0 0;
-}
+
 /*POWER MENU WIDGET*/
+/* Uptime text */
 .uptime {
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -122,13 +136,26 @@
 }
 .volume-widget .icon {
 	color: #89b4fa;
-	margin: 1px 2px 0 0;
 }
  
-/* WEATHER WIDGET */
-.weather-widget .icon {
-	font-size: 16px;
-	margin: 0 2px 1px 0;
+.cpu-widget .icon,
+.memory-widget .icon,
+.volume-widget .icon,
+.weather-widget .icon,
+.wifi-widget .icon {
+	margin: 0 4px 1px 0;
+}
+.cpu-widget .icon,
+.memory-widget .icon {
+	font-size: 14px;
+	color: #cba6f7;
+}
+.memory-widget .icon {
+	color: #a6c9f7;
+}
+.wifi-widget .icon {
+    font-size: 14px;
+	color: #43d8d8;
 }
 .weather-widget .icon.sunnyDay {
 	color: rgb(221, 210, 107);
@@ -154,35 +181,19 @@
 	color: #acb2c9;
 	padding: 0 3px;
 	margin: 4px 0;
-    font-weight: 500;
 	font-family: Segoe Fluent Icons;
 }
 .media-widget .btn:hover {
-	color: #ffffff;
+	color: #89b4fa;
 }
 .media-widget .btn.play {
-	background-color: rgba(255, 255, 255, 0.1);
-	border-radius: 14px;
-	font-size: 16px;
+	background-color: rgba(188, 195, 207, 0.178);
+	border-radius: 12px;
+	font-size: 14px;
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
-	color: #7d8297;
+	color: #4e525c;
 	font-size: 12px;
 	background-color: rgba(0, 0, 0, 0);
-}
-
-/* TASBAR WIDGET */
-.taskbar-widget {
-    padding: 0;
-    margin: 0;
-}
-.taskbar-widget .app-container {
-    padding:0 6px;
-}
-.taskbar-widget .app-container .app-title {
-    padding-left: 4px;
-}
-.win-button-widget .label {
-    font-size: 18px;
 }
