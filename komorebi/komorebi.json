@@ -10,7 +10,7 @@
   "border_offset": 0,
   "border_implementation": "Windows",
   "border_style": "System",
-  "mouse_follows_focus": true,
+  "mouse_follows_focus": false,
   "transparency": true,
   "transparency_alpha": 240,
   "theme": {
