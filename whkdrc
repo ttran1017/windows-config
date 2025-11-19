@@ -10,7 +10,13 @@ alt + i                     : komorebic toggle-shortcuts
 alt + q                     : komorebic close
 alt + m                     : komorebic minimize
 
-# Focus windows
+# App shortcuts - these require shell to be pwsh / powershell
+alt + e                   : start msedge
+alt + w                   : start wt
+alt + c                   : code
+alt + f                   : start explorer
+
+# Focus windowsz
 alt + h                     : komorebic focus left
 alt + j                     : komorebic focus down
 alt + k                     : komorebic focus up
@@ -76,11 +82,9 @@ alt + shift + 8             : komorebic move-to-workspace 7
 alt + a             		: komorebic focus-monitor 0
 alt + s            			: komorebic focus-monitor 1
 alt + d				    	: komorebic focus-monitor 2
-alt + f				    	: komorebic focus-monitor 3
 
 # Move windows across monitors
 alt + shift + a	: komorebic move-to-monitor 0
 alt + shift + s	: komorebic move-to-monitor 1
 alt + shift + d	: komorebic move-to-monitor 2
-alt + shift + f	: komorebic move-to-monitor 3
 
