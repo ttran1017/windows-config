@@ -14,13 +14,13 @@ alt + m                     : komorebic minimize
 alt + shift + e				: start msedge
 alt + shift + w				: start wt
 alt + shift + c				: code
-alt + shift + f				: start explorer
+alt + shift + v				: start explorer
 
 # App shortcuts - focus existing window
 alt + e                   	: komorebic eager-focus msedge.exe
 alt + w                   	: komorebic eager-focus WindowsTerminal.exe
 alt + c                   	: komorebic eager-focus Code.exe
-alt + f                   	: komorebic eager-focus explorer.exe
+alt + v                   	: komorebic eager-focus explorer.exe
 
 # Focus windows
 alt + h                     : komorebic focus left
