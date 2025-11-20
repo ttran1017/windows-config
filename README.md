@@ -8,14 +8,10 @@ winget install LGUG2Z.whkd
 winget install --id AmN.yasb
 ```
 
-2. Set `KOMOREBI_CONFIG_HOME` environment variable to .config
-```sh
-SETX KOMOREBI_CONFIG_HOME C:\Users\<username>\.config\komorebi
+2. Run setup script
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\setup.ps1
 ```
 
-3. Copy repo to .config repo
-```sh
-git clone https://github.com/ttran1017/windows-config.git C:\Users\<username>\.config
-```
-
-4. Run YASB and activate Komorebi
+3. Run YASB and activate Komorebi
