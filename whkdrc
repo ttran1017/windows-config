@@ -3,7 +3,7 @@
 # Reload whkd configuration
 alt + o                     : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
 alt + shift + o             : komorebic reload-configuration
-alt + shift + r             : komorebic stop --whkd; komorebic start --whkd;
+alt + r             		: if (Get-Process komorebi -ErrorAction SilentlyContinue) { komorebic stop } else { komorebic start }
 
 alt + i                     : komorebic toggle-shortcuts
 
@@ -11,18 +11,25 @@ alt + q                     : komorebic close
 alt + m                     : komorebic minimize
 
 # App shortcuts - these require shell to be pwsh / powershell
-alt + e                   : start msedge
-alt + w                   : start wt
-alt + c                   : code
-alt + f                   : start explorer
+alt + shift + e				: start msedge
+alt + shift + w				: start wt
+alt + shift + c				: code
+alt + shift + f				: start explorer
 
-# Focus windowsz
+# App shortcuts - focus existing window
+alt + e                   	: komorebic eager-focus msedge.exe
+alt + w                   	: komorebic eager-focus WindowsTerminal.exe
+alt + c                   	: komorebic eager-focus Code.exe
+alt + f                   	: komorebic eager-focus explorer.exe
+
+# Focus windows
 alt + h                     : komorebic focus left
 alt + j                     : komorebic focus down
 alt + k                     : komorebic focus up
 alt + l                     : komorebic focus right
 alt + shift + oem_4         : komorebic cycle-focus previous # oem_4 is [
 alt + shift + oem_6         : komorebic cycle-focus next # oem_6 is ]
+alt + return                : komorebic promote-focus
 
 # Move windows
 alt + shift + h             : komorebic move left
