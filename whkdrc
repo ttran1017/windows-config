@@ -46,6 +46,7 @@ alt + ctrl + right          : komorebic stack right
 alt + oem_1                 : komorebic unstack # oem_1 is ;
 alt + oem_4                 : komorebic cycle-stack previous # oem_4 is [
 alt + oem_6                 : komorebic cycle-stack next # oem_6 is ]
+alt + oem_3                 : komorebic cycle-stack next # oem_3 is `
 
 # Resize
 alt + oem_plus              : komorebic resize-axis horizontal increase
@@ -91,7 +92,7 @@ alt + s            			: komorebic focus-monitor 1
 alt + d				    	: komorebic focus-monitor 2
 
 # Move windows across monitors
-alt + shift + a	: komorebic move-to-monitor 0
-alt + shift + s	: komorebic move-to-monitor 1
-alt + shift + d	: komorebic move-to-monitor 2
+alt + shift + a	:           komorebic move-to-monitor 0
+alt + shift + s	:           komorebic move-to-monitor 1
+alt + shift + d	:           komorebic move-to-monitor 2
 
