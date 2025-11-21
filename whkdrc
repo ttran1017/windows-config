@@ -1,70 +1,39 @@
 .shell powershell
 
-# Reload whkd configuration
-alt + o                     : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o             : komorebic reload-configuration
-alt + r             		: if (Get-Process komorebi -ErrorAction SilentlyContinue) { komorebic stop } else { komorebic start }
+# Focus windows
+alt + a                     : komorebic focus left
+alt + s                     : komorebic focus down
+alt + w                     : komorebic focus up
+alt + d                     : komorebic focus right
+alt + r                     : komorebic promote-focus
 
-alt + i                     : komorebic toggle-shortcuts
+# Move windows
+alt + shift + a             : komorebic move left
+alt + shift + s             : komorebic move down
+alt + shift + w             : komorebic move up
+alt + shift + d             : komorebic move right
+alt + shift + r        		: komorebic promote
 
-alt + q                     : komorebic close
-alt + m                     : komorebic minimize
-
-# App shortcuts - these require shell to be pwsh / powershell
-alt + shift + e				: start msedge
-alt + shift + w				: start wt
-alt + shift + c				: code
-alt + shift + v				: start explorer
 
 # App shortcuts - focus existing window
-alt + e                   	: komorebic eager-focus msedge.exe
-alt + w                   	: komorebic eager-focus WindowsTerminal.exe
+alt + z                   	: komorebic eager-focus msedge.exe
+alt + x                   	: komorebic eager-focus WindowsTerminal.exe
 alt + c                   	: komorebic eager-focus Code.exe
 alt + v                   	: komorebic eager-focus explorer.exe
 
-# Focus windows
-alt + h                     : komorebic focus left
-alt + j                     : komorebic focus down
-alt + k                     : komorebic focus up
-alt + l                     : komorebic focus right
-alt + shift + oem_4         : komorebic cycle-focus previous # oem_4 is [
-alt + shift + oem_6         : komorebic cycle-focus next # oem_6 is ]
-alt + return                : komorebic promote-focus
+# App shortcuts - these require shell to be pwsh / powershell
+alt + shift + z				: start msedge
+alt + shift + x				: start wt
+alt + shift + c				: code
+alt + shift + v				: start explorer
 
-# Move windows
-alt + shift + h             : komorebic move left
-alt + shift + j             : komorebic move down
-alt + shift + k             : komorebic move up
-alt + shift + l             : komorebic move right
-alt + shift + return        : komorebic promote
+# Monitors
+alt + q             		: komorebic focus-monitor 0
+alt + e            			: komorebic focus-monitor 1
 
-# Stack windows
-alt + ctrl + left           : komorebic stack left
-alt + ctrl + down           : komorebic stack down
-alt + ctrl + up             : komorebic stack up
-alt + ctrl + right          : komorebic stack right
-alt + oem_1                 : komorebic unstack # oem_1 is ;
-alt + oem_4                 : komorebic cycle-stack previous # oem_4 is [
-alt + oem_6                 : komorebic cycle-stack next # oem_6 is ]
-alt + oem_3                 : komorebic cycle-stack next # oem_3 is `
-
-# Resize
-alt + oem_plus              : komorebic resize-axis horizontal increase
-alt + oem_minus             : komorebic resize-axis horizontal decrease
-alt + shift + oem_plus      : komorebic resize-axis vertical increase
-alt + shift + oem_minus     : komorebic resize-axis vertical decrease
-
-# Manipulate windows
-alt + t                     : komorebic toggle-float
-alt + shift + f             : komorebic toggle-monocle
-
-# Window manager options
-alt + shift + r             : komorebic retile
-alt + p                     : komorebic toggle-pause
-
-# Layouts
-alt + x                     : komorebic flip-layout horizontal
-alt + y                     : komorebic flip-layout vertical
+# Move windows across monitors
+alt + shift + q	:           komorebic move-to-monitor 0
+alt + shift + e	:           komorebic move-to-monitor 1
 
 # Workspaces
 alt + 1                     : komorebic focus-workspace 0
@@ -86,13 +55,33 @@ alt + shift + 6             : komorebic move-to-workspace 5
 alt + shift + 7             : komorebic move-to-workspace 6
 alt + shift + 8             : komorebic move-to-workspace 7
 
-# Monitors
-alt + a             		: komorebic focus-monitor 0
-alt + s            			: komorebic focus-monitor 1
-alt + d				    	: komorebic focus-monitor 2
+# Stack windows
+alt + ctrl + a           	: komorebic stack left
+alt + ctrl + s           	: komorebic stack down
+alt + ctrl + w           	: komorebic stack up
+alt + ctrl + d           	: komorebic stack right
+alt + ctrl + q           	: komorebic unstack
+alt + oem_3                 : komorebic cycle-stack next # oem_3 is `
 
-# Move windows across monitors
-alt + shift + a	:           komorebic move-to-monitor 0
-alt + shift + s	:           komorebic move-to-monitor 1
-alt + shift + d	:           komorebic move-to-monitor 2
+# Manipulate windows
+alt + shift + t             : komorebic toggle-float
+alt + shift + f             : komorebic toggle-monocle
 
+alt + ctrl + x              : komorebic close
+alt + ctrl + z				: komorebic minimize
+
+# Reload whkd configuration
+alt + i                     : komorebic toggle-shortcuts
+alt + o                     : taskkill /f /im whkd.exe; Start-Procesds whkd -WindowStyle hidden # if shell is pwsh / powershell
+alt + p                     : if (Get-Process komorebi -ErrorAction SilentlyContinue) { komorebic stop } else { komorebic start }
+
+# Resize
+alt + oem_plus              : komorebic resize-axis horizontal increase
+alt + oem_minus             : komorebic resize-axis horizontal decrease
+alt + shift + oem_plus      : komorebic resize-axis vertical increase
+alt + shift + oem_minus     : komorebic resize-axis vertical decrease
+
+
+# Window manager options
+alt + k             		: komorebic retile
+alt + l                     : komorebic toggle-pause
